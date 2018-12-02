@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+# Песецкий Артем
+## Автобиография
+- Родился 11 июня 1996 года в городе Минске.
+- В 2014 году закончил среднюю школу №201 города Минска.
+- В 2018 году окончил факультет прикладной математики и информатики Белорусского государственного университета по специальности информатика с присвоением квалификации «математик-системный программист».
+- В настоящее время является студентом магистратуры ФПМИ БГУ по специальности «прикладная математика и информатика».
 
-You can use the [editor on GitHub](https://github.com/shogifun/shogifun.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Учебные материалы
+- [Реферат](https://github.com/shogifun/shogifun.github.io/blob/master/materials/main.pdf)
+- [Презентация](https://github.com/shogifun/shogifun.github.io/blob/master/materials/%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20IT%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.pptm)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shogifun/shogifun.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Научный руководитель
+[Рафеенко Екатерина Дмитриевна](https://fpmi.bsu.by/main.aspx?guid=32371)
