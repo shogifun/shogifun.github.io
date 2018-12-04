@@ -1,0 +1,183 @@
+% This template stolen from Andrey Klitsunov. Thank you Andrew
+
+
+\documentclass[14pt, a4paper]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{setspace}
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage[pdftex]{graphicx}
+\usepackage{soul} 
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{gensymb}
+% package for graph drawing
+\usepackage{tikz}
+
+
+% for custom captions
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{ddash}{.---}
+\captionsetup{labelsep=ddash}
+\captionsetup[figure]{labelfont=bf}
+\captionsetup[table]{justification=justified, singlelinecheck=false}
+
+% for BDSM with table of contents
+%\usepackage{tocloft}
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%\usepackage{tocstyle}
+\usepackage{blindtext}
+
+
+\usepackage{titletoc}%
+\titlecontents{section}% <section-type>
+[0pt]% <left>
+{}% <above-code>
+{\MakeUppercase\chaptername\ \thecontentslabel. }% <numbered-entry-format>
+{}% <numberless-entry-format>
+{\dotfill\contentspage}%
+
+\titlecontents{subsection}% <section-type>
+[0.8em]% <left>
+{}% <above-code>
+{\thecontentslabel. }% <numbered-entry-format>
+{}% <numberless-entry-format>
+{\dotfill\contentspage}%
+
+% \dottedcontents{<section>}[<left>]{<above-code>}
+% {<label width>}{<leader width>}
+%\dottedcontents{section}[0em]{}{3.3em}{1pc}
+%dottedcontents{subsection}[0em]{}{3.3em}{1pc}
+
+%\usetocstyle{allwithdot}
+
+% Redefinition of ToC command to get centered heading
+\makeatletter
+\renewcommand\tableofcontents{%
+	\null\hfill\textbf{\large\contentsname}\hfill\null\par
+	\@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+	\vspace{3em}%
+	\@starttoc{toc}%
+}
+\makeatother
+
+
+% also russian spacing
+\singlespacing
+
+% setting equation number
+\renewcommand\theequation{\arabic{section}.\arabic{equation}}
+
+\mathtoolsset{showonlyrefs=true} %equation number only for referenced
+
+% smart tables
+\usepackage{tabularx}
+\usepackage{tabulary}
+
+% smart ',' in math mode
+%\usepackage{icomma}
+
+% use to copy math sign to next line
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%redefining english style math symbols to russian style
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\ensuremath{\varphi}}
+\renewcommand{\kappa}{\ensuremath{\varkappa}}
+\renewcommand{\le}{\ensuremath{\leqslant}}
+\renewcommand{\leq}{\ensuremath{\leqslant}}
+\renewcommand{\ge}{\ensuremath{\geqslant}}
+\renewcommand{\geq}{\ensuremath{\geqslant}}
+\renewcommand{\emptyset}{\varnothing}
+
+% setting path to image folder
+\graphicspath{{img/}}
+
+% problem pasting command
+% using style from Garey & Johnson
+\newcounter{problem}[section]
+\newcommand{\pasteproblem}[3]{
+	\addtocounter{problem}{1}
+	\noindent \textbf{\textsc{#1}} \\
+	\noindent УСЛОВИЕ. #2\\
+	\noindent ВОПРОС. #3\\
+}
+
+ % set page margins
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+% set line space
+\renewcommand{\baselinestretch}{1}
+\setlength{\parskip}{0.8em}
+\setlength{\parindent}{1.5em}
+
+% set titles style
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries\center\onehalfspacing}{Глава \arabic{section}\\}{2pt}{}
+\titleformat{\subsection}[block]{\large\bfseries}{\hspace{0.8em} \arabic{section}.\arabic{subsection} }{2pt}{}
+\titleformat*{\subsubsection}{\bfseries}
+
+% figure captions settings
+\renewcommand\thefigure{\thesection.\arabic{figure}}  
+\makeatletter
+\renewcommand{\fnum@figure}{Рисунок \thefigure}
+\makeatother
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+% table captions settings
+\renewcommand\thetable{\thesection.\arabic{table}}  
+\makeatletter
+\renewcommand{\fnum@table}{Таблица \thetable}
+\makeatother
+
+% set theorems title style
+\usepackage{amsthm}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{statement}{Утверждение}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+
+% content title changing
+\addto\captionsrussian{
+  \renewcommand{\contentsname}
+    {ОГЛАВЛЕНИЕ}
+}
+
+% bibliography title changing
+\addto\captionsrussian{
+  \renewcommand{\refname}
+    {СПИСОК ЛИТЕРАТУРЫ}
+}
+
+\begin{document}
+	\input{titles/title_page}
+	\setcounter{page}{2}
+	\input{other/contents}
+	\input{other/intro}
+	\input{chapters/chapter_1}
+	\input{chapters/chapter_2}
+	\input{other/results}
+	\input{other/bibliography}
+	\input{other/B}
+	\input{other/applications}
+\end{document}
+
